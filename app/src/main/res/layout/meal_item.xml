@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="30dp"
+    app:cardUseCompatPadding="true"
+    android:backgroundTint="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/inner_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp">
+        
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/meal_image"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/loading"
+            app:layout_constraintTop_toTopOf="@id/inner_layout"
+            app:layout_constraintStart_toStartOf="@id/inner_layout"
+            app:layout_constraintEnd_toEndOf="@id/inner_layout"/>
+
+        <TextView
+            android:id="@+id/meal_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Placeholder Text"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@id/meal_image"
+            app:layout_constraintStart_toStartOf="@id/inner_layout"
+            app:layout_constraintEnd_toEndOf="@id/inner_layout"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
